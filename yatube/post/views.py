@@ -2,13 +2,10 @@ from django.shortcuts import render
 
 def index(request):
     template = 'post/index.html'
-    text =  'Это главная страница'
+    text =  'Yatube - это платформа, созданная для того, чтобы люди могли делиться своими интересными историями с остальными!'
 
-    content = {
-        'text': text,
-    }
 
-    return render(request, template, content)
+    return render(request, template)
 
 
 def group_posts(request, pk):

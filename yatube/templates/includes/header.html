@@ -1,11 +1,17 @@
 {% load static %}
 <header>
-    <nav class="navbar navbar-light" style="background-color: lightskyblue">
+    <nav class="navbar navbar-light" style="background-color: lightgrey opacity:0.5">
       <div class="container">
           <a class="navbar-brand" href="{% url "post:index" %}">
             <img src = "{% static "img\logo.png" %}"  width="30" height="30" class="d-inline-block align-top" alt="">
             <span style="color:red">Ya</span>tube
-        </a>
+          </a>
+          <ul>
+            <li><a href="#">Главная страница</a></li>
+            <li><a href="#">Последние публикации</a></li>
+            <li><a href="#">Об авторе </a></li>
+            <li><a href="#">Личный кабинет</a></li>
+          </ul>
       </div>
     </nav>
 </header>
