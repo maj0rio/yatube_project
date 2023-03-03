@@ -7,10 +7,10 @@
             <span style="color:red">Ya</span>tube
           </a>
           <ul>
-            <li><a href="#">Главная страница</a></li>
-            <li><a href="#">Последние публикации</a></li>
+            <li><a href="{% url "post:index" %}">Главная страница</a></li>
+            <li><a href="{% url "post:last_posts" %}">Последние публикации</a></li>
             <li><a href="#">Об авторе </a></li>
-            <li><a href="#">Личный кабинет</a></li>
+            <li><a href="{% url "users:login" %}">Личный кабинет</a></li>
           </ul>
       </div>
     </nav>

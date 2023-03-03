@@ -19,7 +19,8 @@ from django.urls import include, path
 urlpatterns = [
 
     path('', include('post.urls', namespace='post')),
-    path('group/<slug:slug>/', include('post.urls',  namespace='post')),
+    path('auth/', include('users.urls', namespace='users')),
+
     path('admin/', admin.site.urls),
 
 ]

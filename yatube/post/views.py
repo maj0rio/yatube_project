@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Post, User
 
 def index(request):
     template = 'post/index.html'
@@ -14,5 +15,14 @@ def group_posts(request, pk):
 
     content = {
         'text': text,
+    }
+    return render(request, template, content)
+
+def last_posts(request):
+    template = 'post/last_posts.html'
+    posts_list = Post.objects.all()
+
+    content = {
+        'posts': posts_list
     }
     return render(request, template, content)

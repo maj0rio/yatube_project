@@ -6,7 +6,7 @@ body{
   background-size: cover;
   font-family: Verdana;
 }
-ul {
+ul{
   list-style: none; /*убираем маркеры списка*/
   margin: 0; /*убираем отступы*/
   padding-left: 0; /*убираем отступы*/
@@ -28,6 +28,7 @@ li {
     font-color: white;
 
 }
+
 .main {
     text-align: center;
     margin-top: 50px;
@@ -35,4 +36,58 @@ li {
     margin-bottom:190px;
 
 }
+/* Стилизация контейнера для каждого поста */
+.post-container {
+  background-color: #F8F8F8;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  padding: 20px;
+}
 
+#test{
+   margin-left:20px;
+   color: black;
+   margin-top:10px;
+   margin-bottom: 20px;
+}
+
+/* Стилизация заголовка поста */
+.post-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Стилизация даты поста */
+.post-date {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Стилизация текста поста */
+.post-text {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Стилизация кнопки "читать далее" */
+.read-more-btn {
+  background-color: #333;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.read-more-btn:hover {
+  background-color: #666;
+}
