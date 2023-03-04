@@ -3,15 +3,27 @@
 <html lang="ru">
 <head>
     {% include 'includes/head.html' %}
-    <title>{% block title %} {% endblock %}</title>
+    <title>{% block title %} Yatube {% endblock %}</title>
 </head>
-    <body>
-      <link rel = "stylesheet" href = "{% static "css/style.css" %}">
-        {% include 'includes/header.html' %}
+<body>
+  <header>
+    <nav class="navbar navbar-light" style="background-color: lightgrey opacity:0.5">
+      <div class="container">
+          <a class="navbar-brand" href="{% url "post:index" %}">
+            <img src = "{% static "img\logo.png" %}"  width="30" height="30" class="d-inline-block align-top" alt="">
+            <span style="color:red">Ya</span>tube
+          </a>
 
-        {% block content %}
-        {% endblock %}
+          {% block link %}
 
-        {% include 'includes/footer.html' %}
-    </body>
+          {% endblock %}
+
+      </div>
+    </nav>
+  </header>
+  {% block content %}
+  {% endblock %}
+
+  {% include 'includes/footer.html' %}
+</body>
 </html>

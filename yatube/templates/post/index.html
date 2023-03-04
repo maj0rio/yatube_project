@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
-{% block title %}
+{% load static %}
+{% block title %}Yatube - Главная страница{% endblock %}
 
+{% block link %}
+<ul>
+    <li><a class="active_link" href="{% url "post:index" %}">Главная страница</a></li>
+    <li><a href="{% url "post:last_posts" %}">Последние публикации</a></li>
+    <li><a href="#">Об авторе </a></li>
+    <li><a href="{% url "users:login" %}">Личный кабинет</a></li>
+</ul>
 {% endblock %}
 
 {% block content %}
-<div class= "main_text">
+<div class="main_text">
     Yatube
 </div>
 <div class="main" >
     Yatube - это платформа, созданная для того, <br> чтобы люди могли делиться своими интересными историями с остальными!
 </div>
-
 {% endblock %}

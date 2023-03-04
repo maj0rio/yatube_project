@@ -4,6 +4,15 @@
 Yatube - Последние публикации
 {% endblock %}
 
+{% block link %}
+<ul>
+    <li><a href="{% url "post:index" %}">Главная страница</a></li>
+    <li><a class="active_link" href="{% url "post:last_posts" %}">Последние публикации</a></li>
+    <li><a href="#">Об авторе </a></li>
+    <li><a href="{% url "users:login" %}">Личный кабинет</a></li>
+</ul>
+{% endblock %}
+
 {% block content %}
 <h2 id="test">  Последние публикации Yatube. </h2>
   {% for post in posts %}
