@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Yatube - Создать пост
+{% endblock %}
+
+{% block link %}
+<ul>
+    <li><a href="{% url "post:index" %}">Главная страница</a></li>
+    <li><a href="{% url "post:last_posts" %}">Последние публикации</a></li>
+    <li><a href="#">Об авторе </a></li>
+    <li><a href="{% url "users:login" %}">Личный кабинет</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<h2>  Последние публикации Yatube. </h2>
+<form method="post">
+
+
+</form>
+
+
+{% endblock %}

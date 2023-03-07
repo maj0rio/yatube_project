@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+
+{% block title %}Yatube - Личный кабинет {% endblock %}
 {% block link %}
 <ul>
     <li><a href="{% url "post:index" %}">Главная страница</a></li>
@@ -9,10 +11,25 @@
 {% endblock %}
 
 {% block content %}
-  <h2>Login</h2>
-  <form rm method="post">
+  <h2 class="login_h"> Регистрация </h2>
+<form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
+    {{ form.email }}<br>
+    {{ form.first_name }}<br>
+    {{ form.last_name }}<br>
+    {{ form.password1 }}<br>
+    {{ form.password2 }}<br>
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+    {% for field in form %}
+      {% for error in field.errors %}
+        <strong>{{ field.label }}</strong>: {{ error|escape }}
+      {% endfor %}
+    {% endfor %}
+    </div>
+{% endif %}
+    {{ error }}
+    <button class="btn" type="submit"> Login </button>
+</form>
 {% endblock %}

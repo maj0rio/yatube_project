@@ -15,12 +15,16 @@ Yatube - Последние публикации
 
 {% block content %}
 <h2 id="test">  Последние публикации Yatube. </h2>
-  {% for post in posts %}
+  {% if posts %}
+    {% for post in posts %}
     <div class="post-container">
         <h3 class="post-title">{{ post.title }}</h3>
         <p class="post-author">{{ post.author }}</p>
         <p class="post-text">{{ post.text }}</p>
     </div>
-  {% endfor %}
+    {% endfor %}
+  {% else %}
+    <span>Пока что записей нет :(</span>
+  {% endif %}
 
 {% endblock %}

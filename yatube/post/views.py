@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Post, User
+from .models import Post
+from .forms import PostForm
 
 def index(request):
     template = 'post/index.html'
@@ -18,6 +19,7 @@ def group_posts(request, pk):
     }
     return render(request, template, content)
 
+
 def last_posts(request):
     template = 'post/last_posts.html'
     posts_list = Post.objects.all()
@@ -26,3 +28,12 @@ def last_posts(request):
         'posts': posts_list
     }
     return render(request, template, content)
+
+def create_post(request):
+    form = PostForm()
+
+    content = {
+        'form': form,
+    }
+    return render()
+
