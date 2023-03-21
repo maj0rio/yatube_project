@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Yatube - Личный кабинет {% endblock %}
+{% block link %}
+<ul>
+    <li><a href="{% url 'post:index' %}">Главная страница</a></li>
+    <li><a href="{% url 'post:last_posts' %}">Последние публикации</a></li>
+    <li><a href="#">Об авторе </a></li>
+    <li><a class="active_link" href="{% url 'users:myview' %}">Личный кабинет</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+  <h2 class="login_h"> Регистрация </h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.email }}<br>
+    {{ form.first_name }}<br>
+    {{ form.last_name }}<br>
+    {{ form.password1 }}<br>
+    {{ form.password2 }}<br>
+
+    <button class="btn" type="submit"> Создать пользователя </button>
+</form>
+{% endblock %}

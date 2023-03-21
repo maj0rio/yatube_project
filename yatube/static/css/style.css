@@ -24,6 +24,9 @@ li {
   margin-right:50px; /*Добавляем отступ у пунктов меню*/
 }
 
+
+
+
 .main_text{
     text-align: center;
     margin-top: 200px;
@@ -125,17 +128,11 @@ button[type="submit"] {
 }
 
 .form-control {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #495057;
-  margin-bottom: 20px;
+  width: 400px; /* задаем ширину формы */
+  height: 1 00px; /* задаем высоту формы */
+  margin: auto; /* устанавливаем автоматические отступы по горизонтали для выравнивания по центру */
+  margin-top: 20px;
+  margin-button:20px;
 }
 
 /* Стиль для placeholder */

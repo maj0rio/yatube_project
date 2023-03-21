@@ -29,11 +29,11 @@ def last_posts(request):
     }
     return render(request, template, content)
 
-def create_post(request):
-    form = PostForm()
-
-    content = {
-        'form': form,
-    }
-    return render()
+# def create_post(request):
+#     form = PostForm()
+#
+#     content = {
+#         'form': form,
+#     }
+#     return render()
 
