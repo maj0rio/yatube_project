@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.utils.translation import gettext_lazy as _
 from .models import CustomUser
+from post.models import Post
 
 
 def login_view(request):
@@ -20,7 +21,7 @@ def login_view(request):
                 login(request, user)
                 return redirect('users:myview')
             else:
-                form.add_error("Incorrect email or password.")
+                form.add_error("Неверный логин или пароль!")
     else:
         form = AuthenticationForm()
 
@@ -33,8 +34,9 @@ def login_view(request):
 @login_required()
 def myview(request):
     template = 'users/myview.html'
+    posts = Post.objects.filter(author=request.user)
     content = {
-
+        'posts': posts,
     }
     return render(request, template, content)
 

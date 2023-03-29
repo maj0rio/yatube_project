@@ -76,8 +76,7 @@ class AuthenticationForm(forms.Form):
                                )
 
     error_messages = {
-        'invalid_login': _("Please enter a correct %(email)s and password. "
-                           "Note that both fields may be case-sensitive."),
+        'invalid_login': _("Неправильный логин или пароль"),
         'inactive': _("This account is inactive."),
     }
 

@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
     {% block title %} Лев Толстой – зеркало русской революции.{% endblock %}
-
+{% block link %}
+    <ul>
+      <li><a href="{% url 'post:index' %}">Главная страница</a></li>
+      <li><a href="{% url 'post:last_posts' %}">Последние публикации</a></li>
+      <li><a href="#">Об авторе </a></li>
+      <li>
+        <span class="dropdown-parent" id="account-link">Личный кабинет</span>
+        <div id="account-dropdown">
+            <ul>
+                <li><a href="{% url 'users:myview' %}">Мой страница</a></li>
+                <li><a href="{% url 'post:create_post' %}">Добавить пост</a></li>
+            </ul>
+        </div>
+      </li>
+    </ul>
+    {% endblock %}
 {% block content %}
 <h2> {{ text }} </h2>
 {% endblock %}

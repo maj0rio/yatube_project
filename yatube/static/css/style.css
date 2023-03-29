@@ -24,9 +24,6 @@ li {
   margin-right:50px; /*Добавляем отступ у пунктов меню*/
 }
 
-
-
-
 .main_text{
     text-align: center;
     margin-top: 200px;
@@ -68,46 +65,46 @@ button[type="submit"] {
   margin-top: 20px;
   cursor: pointer;
   border-radius: 5px;
-  margin-bottom: 365px;
-}
-
-/* Стилизация контейнера для каждого поста */
-.post-container {
-  background-color: #F8F8F8;
-  border-radius: 30px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   margin-bottom: 20px;
-  padding: 20px;
 }
 
-#test{
-   margin-left:20px;
-   color: black;
-   margin-top:10px;
-   margin-bottom: 20px;
-}
-
-/* Стилизация заголовка поста */
-.post-title {
-  color: #333;
+.test {
+  text-align: center;
   font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 550;
+  margin-top:15px;
+  margin-bottom: 20px;
+}
+.post-container {
+  width: 70%; /* ширина контейнера для поста */
+  margin: 0 auto; /* центрирование по горизонтали */
+  background-color: #f8f8f8; /* цвет фона */
+  border: 1px solid #ddd; /* граница */
+  padding: 20px; /* отступ внутри контейнера */
+  margin-bottom: 20px; /* отступ между контейнерами по  стов */
+  padding-bottom: 0px;
+  border-radius: 15px;
 }
 
-/* Стилизация даты поста */
-.post-date {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 10px;
+.post-title {
+  font-size: 24px; /* размер заголовка */
+  margin-bottom: 10px; /* отступ между заголовком и текстом поста */
 }
 
-/* Стилизация текста поста */
+.post-author {
+  font-size: 14px; /* размер имени автора */
+  margin-bottom: 10px; /* отступ между именем автора и текстом поста */
+}
+
 .post-text {
-  color: #333;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 10px;
+  font-size: 16px; /* размер текста поста */
+  line-height: 1.5; /* межстрочный интервал */
+  margin-bottom: 15px; /* отступ между текстом поста и датой */
+}
+
+.post-date {
+  font-size: 12px; /* размер даты */
+  color: #666; /* цвет текста даты */
 }
 
 /* Стилизация кнопки "читать далее" */
@@ -168,4 +165,66 @@ button[type="submit"] {
   color: #fff;
   background-color: #0069d9;
   border-color: #0062cc;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.alert {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+#account-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 9999; /* или любое другое большое число */
+  width: 140px; /* задаем ширину колонки */
+  background-color: #fff; /* задаем цвет фона */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* добавляем тень */
+  top: 40px; /* задаем отступ от верхнего края */
+  left: 1164px; /* задаем отступ от левого края */
+  pointer-events: auto;
+}
+
+#account-dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+#account-dropdown a:hover {
+  background-color: #f2f2f2;
+}
+
+#account-link:hover + #account-dropdown {
+  display: block;
+}
+
+#account-dropdown ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#account-dropdown li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ccc; /* добавляем горизонтальные разделители */
+}
+
+#account-dropdown li:last-child {
+  border-bottom: none; /* удаляем разделитель для последнего элемента */
+}
+.dropdown-parent {
+    cursor: pointer;
+    /* Добавьте любые другие стили, которые вы хотите применить */
 }
