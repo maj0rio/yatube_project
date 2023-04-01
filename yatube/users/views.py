@@ -8,6 +8,7 @@ from .models import CustomUser
 from post.models import Post
 
 
+
 def login_view(request):
     template = 'users/login_view.html'
     if request.method == 'POST':

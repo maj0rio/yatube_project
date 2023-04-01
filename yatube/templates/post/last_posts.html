@@ -22,14 +22,15 @@ Yatube - Последние публикации
 {% endblock %}
 
 {% block content %}
-<h2 class="test">  Последние публикации Yatube. </h2>
+<h2 class="test">  Последние публикации <span style="color:red">Ya</span>tube. </h2>
   {% if posts %}
     {% for post in posts %}
     <div class="post-container">
         <h3 class="post-title"> {{ post.title }}</h3>
         <p class="post-author"> Автор: {{ post.author.first_name }} {{ post.author.last_name }} </p>
-        <p class="post-text">{{ post.text }}</p>
+        <p class="post-text">{{ post.text|truncatewords:30 }}</p>
         <p class="post-date">{{ post.date|date:"H:i, d.m.Y" }}</p>
+        <a href="{% url 'post:watch_post' post.id %}" class="read-more-btn">Читать целиком</a>
     </div>
     {% endfor %}
   {% else %}

@@ -33,9 +33,9 @@
             {% endfor %}
             </div>
         {% endif %}
-        <button type="submit"> Войти </button>
+        <button class="btn_auth"> Войти </button>
         <div class="registration">
-            <p>Еще не зарегистрированы?<a href="{% url 'users:create_user' %}">Создайте аккаунт</a>!</p>
+            <p >Еще не зарегистрированы?<a class="registration_a" href="{% url 'users:create_user' %}"> Создайте аккаунт!</a></p>
         </div>
     </form>
 {% endblock %}

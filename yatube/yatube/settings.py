@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'post.apps.PostConfig',
     'users.apps.UsersConfig',
+    'likes.apps.LikesConfig',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'

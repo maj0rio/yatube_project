@@ -5,6 +5,7 @@ body{
   background-position: center top;
   background-size: cover;
   font-family: Verdana;
+  min-height: calc(100vh - 80px);
 }
 ul{
   list-style: none; /*убираем маркеры списка*/
@@ -37,7 +38,7 @@ li {
     text-align: center;
     margin-top: 50px;
     font-size: 25px;
-    margin-bottom:190px;
+    margin-bottom:165px;
 
 }
 .login_h{
@@ -54,7 +55,7 @@ form {
 }
 
 button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #333;
   border: none;
   color: white;
   padding: 12px 24px;
@@ -62,10 +63,10 @@ button[type="submit"] {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 10px;
   cursor: pointer;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 73px;
 }
 
 .test {
@@ -80,8 +81,8 @@ button[type="submit"] {
   margin: 0 auto; /* центрирование по горизонтали */
   background-color: #f8f8f8; /* цвет фона */
   border: 1px solid #ddd; /* граница */
-  padding: 20px; /* отступ внутри контейнера */
-  margin-bottom: 20px; /* отступ между контейнерами по  стов */
+  padding: 20px 20px; /* отступ внутри контейнера */
+  margin-bottom: 30px; /* отступ между контейнерами постов */
   padding-bottom: 0px;
   border-radius: 15px;
 }
@@ -93,43 +94,69 @@ button[type="submit"] {
 
 .post-author {
   font-size: 14px; /* размер имени автора */
-  margin-bottom: 10px; /* отступ между именем автора и текстом поста */
+  margin-bottom: 15px; /* отступ между именем автора и текстом поста */
 }
 
 .post-text {
   font-size: 16px; /* размер текста поста */
   line-height: 1.5; /* межстрочный интервал */
-  margin-bottom: 15px; /* отступ между текстом поста и датой */
+  margin-bottom: 20px; /* отступ между текстом поста и датой */
+}
+.post-text-detail{
+  font-size: 16px; /* размер текста поста */
+  line-height: 1.5; /* межстрочный интервал */
+  margin-top: 35px;
+  margin-bottom: 35px; /* отступ между текстом поста и датой */
 }
 
 .post-date {
   font-size: 12px; /* размер даты */
   color: #666; /* цвет текста даты */
+
+}
+.post-date-detail{
+  font-size: 12px; /* размер даты */
+  color: #666; /* цвет текста даты */
 }
 
+.btn_auth{
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  }
 /* Стилизация кнопки "читать далее" */
 .read-more-btn {
+  margin: 0 auto;
   background-color: #333;
   border-radius: 5px;
   color: #fff;
   display: inline-block;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 0px;
+  margin-bottom: 15px;
   padding: 10px 20px;
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.read-more-btn:hover {
-  background-color: #666;
-}
 
 .form-control {
   width: 400px; /* задаем ширину формы */
   height: 1 00px; /* задаем высоту формы */
   margin: auto; /* устанавливаем автоматические отступы по горизонтали для выравнивания по центру */
   margin-top: 20px;
-  margin-button:20px;
+  margin-bottom:20px;
 }
 
 /* Стиль для placeholder */
@@ -142,7 +169,23 @@ button[type="submit"] {
   border-color: #80bdff;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
-
+.btn_add{
+  margin-bottom:100px;
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+}
 /* Стиль для кнопки */
 .btn {
   display: inline-block;
@@ -166,11 +209,12 @@ button[type="submit"] {
   background-color: #0069d9;
   border-color: #0062cc;
 }
-
 footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 80px;
+  padding: 20px;
 }
 .alert {
   margin-top: 10px;
@@ -186,11 +230,11 @@ footer {
   display: none;
   position: absolute;
   z-index: 9999; /* или любое другое большое число */
-  width: 140px; /* задаем ширину колонки */
+  width: 145px; /* задаем ширину колонки */
   background-color: #fff; /* задаем цвет фона */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* добавляем тень */
   top: 40px; /* задаем отступ от верхнего края */
-  left: 1164px; /* задаем отступ от левого края */
+  left: 1227px; /* задаем отступ от левого края */
   pointer-events: auto;
 }
 
@@ -224,7 +268,24 @@ footer {
 #account-dropdown li:last-child {
   border-bottom: none; /* удаляем разделитель для последнего элемента */
 }
-.dropdown-parent {
+.dropdown-paent {
     cursor: pointer;
     /* Добавьте любые другие стили, которые вы хотите применить */
+}
+
+.registration {
+  margin-top: 0px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+.registration_a {
+  color: #bb2222;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.registration a:hover {
+  color: red;
+  text-decoration: underline;
 }

@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .models import Post
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
+from datetime import timedelta
+from django.utils import timezone
 
 
 def index(request):
@@ -26,7 +28,7 @@ def group_posts(request, pk):
 
 def last_posts(request):
     template = 'post/last_posts.html'
-    posts_list = Post.objects.all()
+    posts_list = Post.objects.filter(date__gte=timezone.now() - timedelta(days=1))
 
     content = {
         'posts': posts_list
@@ -52,4 +54,17 @@ def create_post(request):
         'form': form,
     }
     return render(request, template, content)
+
+
+def watch_post(request, pk):
+    template = 'post/watch_post.html'
+    post = Post.objects.get(id=pk)
+
+    content = {
+        'post': post
+    }
+
+    return render(request, template, content)
+
+
 

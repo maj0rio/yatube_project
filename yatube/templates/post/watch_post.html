@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block link %}
+<ul>
+  <li><a href="{% url 'post:index' %}">Главная страница</a></li>
+  <li><a class="active_link" href="{% url 'post:last_posts' %}">Последние публикации</a></li>
+  <li><a href="#">Об авторе </a></li>
+  <li>
+    <span class="dropdown-parent" id="account-link">Личный кабинет</span>
+    <div id="account-dropdown">
+        <ul>
+            <li><a href="{% url 'users:myview' %}">Мой страница</a></li>
+            <li><a href="{% url 'post:create_post' %}">Добавить пост</a></li>
+        </ul>
+    </div>
+  </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<h2 class="test"> Пост </h2>
+<div class="post-container">
+    <h3 class="post-title"> {{ post.title }}</h3>
+    <p class="post-author"> Автор: {{ post.author.first_name }} {{ post.author.last_name }} </p>
+    <p class="post-text-detail">{{ post.text }}</p>
+    <p class="post-date-detail">{{ post.date|date:"H:i, d.m.Y" }}</p>
+</div>
+
+{% endblock %}
